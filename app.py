@@ -1,4 +1,4 @@
-from src.predict.py import predict
+from src.predict import predict
 import gradio as gd
 
 interface = gd.Interface(
@@ -22,4 +22,5 @@ interface = gd.Interface(
 )
 
 interface.launch()
+
 
