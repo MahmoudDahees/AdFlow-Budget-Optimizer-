@@ -1,4 +1,6 @@
 gradio
 numpy
 pandas
+sklearn
 joblib
+tensorflow
