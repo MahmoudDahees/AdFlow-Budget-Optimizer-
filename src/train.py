@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-data = pd.read_csv("G:\ML projects\Projects\AdFlow Budget Optimizer\Data\marketing_dataset_USA_daily_2000.csv")
+data = pd.read_csv("Data/marketing_dataset_USA_daily_2000.csv")
 data = data.drop("Campaign_ID",axis=1)
 pd.set_option('display.float_format', '{:.10f}'.format)
 
@@ -33,3 +33,4 @@ model.fit(x_train,y_train)
 import joblib
 joblib.dump(model,"model.pkl")
 joblib.dump(scaler,"scaler.pkl")
+
