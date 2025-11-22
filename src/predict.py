@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 import joblib
 
-model = joblib.load("model.pkl")
-scaler = joblib.load("scaler.pkl")
+model = joblib.load("models/model.pkl")
+scaler = joblib.load("models/scaler.pkl")
 
 def predict(platform, objective,ctr_est,cpc_est, cpc, conv_rate, budget, score, leads_fwd, leads_rej, qual_rate, active_leads):
 
@@ -26,3 +26,4 @@ def predict(platform, objective,ctr_est,cpc_est, cpc, conv_rate, budget, score, 
     if pred < 0:
         pred = np.array([0])
     return "Best daily budget for your campaign is " + str(int(pred[0])) + "$"
+
